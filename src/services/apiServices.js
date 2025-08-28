@@ -3,7 +3,7 @@ import axios from 'axios';
 // API Configuration for Flight API
 const API_CONFIG = {
   API_KEY: process.env.REACT_APP_FLIGHT_API_KEY ,
-  TIMEOUT: process.env.REACT_APP_API_TIMEOUT || 10000,
+  TIMEOUT: process.env.REACT_APP_API_TIMEOUT || 200000,
 };
 
 // Secure logging utilities
