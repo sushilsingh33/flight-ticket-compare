@@ -435,9 +435,9 @@ function App() {
 
       {/* Footer */}
       <footer className="app-footer">
-        <p>&copy; 2024 Flight Ticket Compare. Compare prices and find the best flight deals.</p>
+        <p>&copy; 2025 Flight Ticket Compare. Compare prices and find the best flight deals.</p>
         <div className="footer-links">
-          <span>Powered by Sky Scrapper API</span>
+          <span>Powered by Sushil</span>
         </div>
       </footer>
     </div>
