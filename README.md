@@ -1,12 +1,12 @@
 # ✈️ Flight Ticket Compare
 
-A modern web application for comparing flight ticket prices across multiple airlines. Built with React and integrated with the Sky Scrapper API to provide real-time flight search and comparison functionality.
+A modern web application for comparing flight ticket prices across multiple airlines. Built with React and integrated with a flight search API to provide real-time flight search and comparison functionality.
 
 ## 🚀 Features
 
 - **Smart Flight Search**: Search for flights using airport codes with autocomplete suggestions
 - **Price Comparison**: Compare ticket prices across multiple airlines in one view
-- **Real-time API Integration**: Powered by Sky Scrapper API for live flight data
+- **Real-time API Integration**: Powered by a flight search API for live flight data
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **User-friendly Interface**: Modern, intuitive design with smooth animations
 - **Flight Details**: View comprehensive flight information including:
@@ -21,7 +21,7 @@ A modern web application for comparing flight ticket prices across multiple airl
 - **Frontend**: React 18 with modern JavaScript (ES6+)
 - **Styling**: CSS3 with modern features (Grid, Flexbox, CSS Variables)
 - **HTTP Client**: Axios for API requests
-- **API**: Sky Scrapper API via RapidAPI
+- **API**: External flight search API
 - **Build Tool**: Create React App
 
 ## 📋 Prerequisites
@@ -43,12 +43,19 @@ A modern web application for comparing flight ticket prices across multiple airl
    npm install
    ```
 
-3. **Start the development server**:
+3. **Configure environment variables**:
+   Create a `.env` file in the project root (`ticket-compare/`) with your flight API key. You can also set an optional timeout.
+   ```env
+   REACT_APP_FLIGHT_API_KEY=your_flightapi_key_here
+   REACT_APP_API_TIMEOUT=10000
+   ```
+
+4. **Start the development server**:
    ```bash
    npm start
    ```
 
-4. **Open your browser** and navigate to `http://localhost:3000`
+5. **Open your browser** and navigate to `http://localhost:3000`
 
 ## 🎯 Usage
 
@@ -69,16 +76,12 @@ A modern web application for comparing flight ticket prices across multiple airl
 
 ## 🔌 API Configuration
 
-The application uses the Sky Scrapper API for flight data. The API key is already configured in the code:
+The application uses an external flight search API for flight data. Configure your API key via environment variables.
 
-```javascript
-RAPIDAPI_KEY: '2bfc7e17acmshcf5ff6e154a06cap136ef2jsnb83f06281a56'
-```
+### Environment Variables
 
-### API Endpoints Used
-
-- **Flight Search**: `GET /api/v1/flights/getFlightDetails`
-- **Parameters**: legs, adults, currency, locale, market, cabinClass, countryCode
+- `REACT_APP_FLIGHT_API_KEY` (required): Your flight API key
+- `REACT_APP_API_TIMEOUT` (optional): Request timeout in milliseconds (default: 10000)
 
 ## 📱 Responsive Design
 
@@ -105,12 +108,7 @@ npm run build
 
 This creates an optimized production build in the `build` folder.
 
-### Deploy Options
 
-- **Netlify**: Drag and drop the `build` folder
-- **Vercel**: Connect your GitHub repository
-- **AWS S3**: Upload the `build` folder to an S3 bucket
-- **Heroku**: Use the buildpack for static sites
 
 ## 🔧 Development
 
@@ -156,8 +154,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- **Sky Scrapper API**: For providing flight data
-- **RapidAPI**: For API marketplace and integration
 - **React Community**: For the amazing framework and ecosystem
 
 ## 📞 Support
